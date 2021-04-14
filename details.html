@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>演示站</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+        }
+        #myCarousel{
+            margin: 50px 0 0 0;
+        }
+        .logo{
+            padding: 0;
+        }
+        .daohang{
+            margin-top: 0;
+        }
+        .carousel-inner img{
+
+            margin: 0 auto;
+        }
+        .jumbotron{
+            background-image: url(http://img.php.cn/upload/course/000/000/004/581af31542837558.jpg);
+            margin: 50px 0 0;
+            color: #ccc;
+        }
+        .jumbotron h1{
+            font-size: 26px;
+            padding: 0 0 0 20px;
+        }
+        .jumbotron h4{
+            font-size: 15px;
+            padding: 0 0 0 20px;
+        }
+        #information{
+            background-color: #EEEEEE;
+            padding: 40px 0;
+        }
+        .info-cont{
+            background-color: #FFF;
+            margin: 0 0 20px 0 ;
+            box-shadow: 2px 2px 3px #ccc;
+        }
+        .info-cont img{
+            margin: 10px 0 10px 0;
+        }
+        .info-cont h4{
+            color: #000000;
+            padding: 4px 0 ;
+            font-size: 14px;
+        }
+        .info-cont p{
+            line-height: 1.8;
+            letter-spacing: 2px;
+            color: #888888;
+        }
+        .info-right{
+            background-color: #fff;
+            box-shadow: 2px 2px 3px #ccc;
+        }
+        .info-right blockquote{
+            margin: 0px;
+            padding: 0px;
+        }
+        .info-right h2{
+            font-size: 20px;
+            color: #333;
+            padding: 5px;
+        }
+        .info-right h4{
+            color: #333;
+            font-size: 16px;
+            padding: 2px 0 0 0;
+        }
+        .info-right p{
+            line-height: 1.6;
+        }
+        #case{
+            padding: 40px 0;
+            background-color: #eee;
+            text-align: center;
+        }
+        #case h4{
+            color: #666;
+        }
+        #case p{
+            color: #666;
+            line-height: 1.6;
+        }
+        #about{
+            background-color: #eee;
+            padding: 40px 15px;
+        }
+        #about a{
+            color: #2aabd2;
+        }
+        #about .about{
+            background-color: #fff;
+            box-shadow: 2px 2px #ccc;
+        }
+        #about h3{
+            color: #333;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+            margin: 0 0 10px 0;
+        }
+        #about p{
+            line-height: 2;
+            font-size: 13px;
+        }
+        .list{
+            background-color: #fff;
+            box-shadow: 2px 2px #ccc;
+        }
+
+        .rev {
+            border-left: 2px solid #e2b709;
+            width: 100%;
+            overflow: hidden;
+
+            margin-top: 20px;
+            padding-left: 10px;
+        }
+        #list{
+            background-color: #EEEEEE;
+            padding: 40px 0;
+        }
+        #list h3{
+            text-align: center;
+        }
+
+        .list-2{
+            margin-top: 30px;color: gray;
+            text-align: center;
+        }
+        .page{
+            text-align: center;
+        }
+
+        /*小屏幕 大于等于768px*/
+        @media (min-width: 768px) {
+            .tab-h2{
+                font-size: 24px;
+            }
+            .tab-p{
+                font-size: 16px;
+            }
+            .text h3{
+                font-size: 22px;
+            }
+            .text p{
+                font-size: 16px;
+            }
+            .jumbotron h1{
+                font-size: 30px;
+            }
+            .jumbotron h4{
+                font-size: 16px;
+            }
+            .info-cont h4{
+
+                font-size: 16px;
+            }
+            #about h3{
+                font-size: 19px;
+            }
+            #about p{
+                font-size: 14px;
+            }
+        }
+
+        /*中等屏幕 大于等于992px*/
+        @media (min-width: 992px) {
+            .tab-h2{
+                font-size: 28px;
+            }
+            .tab-p{
+                font-size: 17px;
+            }
+            .text h3{
+                font-size: 24px;
+            }
+            .text p{
+                font-size: 18px;
+            }
+            .jumbotron h1{
+                font-size: 32px;
+                padding: 0 0 0 20px;
+            }
+            .jumbotron h4{
+                font-size: 17px;
+                padding: 0 0 0 20px;
+            }
+            .info-cont h4{
+
+                font-size: 18px;
+            }
+            #about h3{
+                font-size: 20px;
+            }
+            #about p{
+                font-size: 15px;
+            }
+        }
+        /*大屏幕 大于等于1200px*/
+        @media (min-width: 1200px) {
+            .tab-h2{
+                font-size: 30px;
+            }
+            .tab-p{
+                font-size: 18px;
+            }
+            .text h3{
+                font-size: 26px;
+            }
+            .text p{
+                font-size: 19px;
+            }
+            .info-cont h4{
+
+                font-size: 20px;
+            }
+            #about h3{
+                font-size: 22px;
+            }
+            #about p{
+                font-size: 16px;
+            }
+        }
+
+        #footer {
+            color: white;
+            background-color: #000000;
+
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand logo" ><img src="https://www.baidu.com/img/flexible/logo/pc/result.png" height="50" alt=""></a>
+            <button type="button"class="navbar-toggle"data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse"id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right daohang " >
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+                <li><a href="information.html"><span class="glyphicon glyphicon-bookmark"></span> 资讯</a></li>
+                <li><a href="case.html"><span class="glyphicon glyphicon-fire"></span> 实例</a></li>
+                <li><a href="about.html"><span class="glyphicon glyphicon-envelope"></span> 关于我们</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class=" jumbotron">
+    <div class="container">
+        <hgroup>
+            <h1></h1>
+            <h4></h4>
+        </hgroup>
+    </div>
+</div>
+<div id="list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container-fluid" style="padding:0">
+                    <div class="row info-cont">
+                        <h3>小米Note2全球首卖 小米双11促销全面开启</h3>
+                        <p class="list-2">测试<img src="http://img.php.cn/upload/course/000/000/004/581beb6601691170.png" style="margin-left: 20px">2016/10/31</p>
+                        <p class="rev"style="color:gray;">简介</p>
+                        <p >CNET科技资讯网 11月1日 北京消息： 有着惊艳双曲面和超强性能的小米Note2来了。上周，小米公司在北京发布了最新的双曲面商务旗舰手机小米Note2，由于具备无与伦比的设计美感，加上梁朝伟的倾情代言，小米Note 2一经发布就打上了“巨星”光环，也吸引了无数米粉的关注。今日（11月1日）10点，小米Note2亮黑、冰川银两种颜色和三种配置，在小米商城、小米之家正式开售，不同配置及价格为4G+64G版本2799元、6G+128G版本3299元、6G+128G全球版3499元。其中小米之家在10月31日中午14:00在官方微信开放小米Note 2预约。用户选择取货门店及时间并填写相关信息，成功后可以到店直接购买。
+
+                            在万众期待的小米Note 2开售的同时，一年一度电商购物盛宴双11也正式拉开帷幕。据了解，在今年双11当中，小米方面的整个活动将会从11月1日开始，持续11天，小米商城、小米天猫旗舰店、小米京东旗舰店、小米苏宁旗舰店全平台参与，小米之家也将线下同庆。值得一提的是，小米Note2、小米MIX两大年度旗舰新品领衔燃爆双11，预计会送出价值1.3亿元福利。
+
+                            小米Note2全球首卖 小米双11促销全面开启
+                            <img src="http://img.php.cn/upload/course/000/000/004/581beb80b1aad376.jpg" class="img-responsive center-block"><br>
+
+                            小米Note2引爆米粉体验热情
+
+                            10月26日上午10时，位于北京华润五彩城的小米之家刚刚开门营业，就有百余名米粉涌入店面当中体验最新发布的小米Note2、小米MIX，曾经在苹果零售店门前出现的“果粉”在体验桌前排队体验的场景，在全国的小米之家再次上演。记者粗略估计，10月26日上午一个小时的时间里，就有数百名米粉前来北京小米之家五彩店体验小米Note2、小米MIX。
+                            “之前也有手机采用正面曲面屏，这款手机的双曲面看起来真的十分惊艳，而且小米Note2是背部弧形设计，这样双曲面不仅正面看起来非常漂亮，拿在手上的手感也十分舒适，小米Note2还拥有目前最强的性能配置，让人十分心动。”正在现场体验手机的米粉李先生表示。
+
+                            小米Note2全球首卖 小米双11促销全面开启
+
+                            <img src="http://img.php.cn/upload/course/000/000/004/581beb9b8dc5d595.jpg" class="img-responsive center-block"><br>
+
+                            小米黑科技燃爆双11
+
+                            每年双11都是米粉狂欢的盛宴，小米也会推出各种促销活动和新品，让米粉用最优惠的价格买到最心仪的产品，今年当然也不例外。据了解，今年小米双11主题已经确定为“小米黑科技，燃爆双11”，活动从11月1日开始一直持续到11月11日，小米商城、小米天猫旗舰店、小米京东旗舰店、小米苏宁旗舰店等全平台参与到此次活动当中，小米之家会线下同庆。
+
+                            小米相关人士表示，小米Note2、小米MIX两大年度旗舰新品将在此次双11中重点亮相，并准备了红米Note4特供版京东独家首发，另有神秘手机新品即将双11期间发布。在米家生态链产品方面，这次堪称史上米家新品最多的小米双11，米家IH电饭煲、米家空气净化器Pro、无人机等诸多新品将在双11当天首卖。
+
+                            今年小米双11还将延续以往的大手笔，小米商城、小米天猫旗舰店将狂送1.3亿元福利。主要活动包括：1111元红包疯狂抽，50元、100元优惠券等你抢，明星爆款产品5折秒杀，小米Max、小米5、小米5s等实物大奖送不停，小米5和小米5s、小米笔记本等小米京东旗舰店手机品类6期分期免息。此外，这次小米还准备多种产品特惠活动：红米3S领券减50元，全平台649元起。小米笔记本13.3吋也将在天猫预售，最高可减100元。11月1日、11月11日两天，米家压力IH电饭煲直降100元。
+
+                            作为小米今年着力建设的线下渠道，在这次双11当中小米之家在线下也推出了五重惊喜。包括新品同步开卖，疯狂周末订单满999元送精美礼品等活动。此外，在11月12—13日，用户出示双11当天在天猫旗舰店的购物订单凭证，店内购物满100减5元。11月11—13日，在小米之家以旧换新，将会获赠新机意外保服务。
+
+                            小米领跑京东竞速排行榜赢得双11开门红
+
+                            在京东今天零点开始上线的双11手机竞速排行榜中，截止到今日（11月1日）9点，手机销量排行前三位分别是：小米、苹果、华为+荣耀，尤其是小米手机的销量一直遥遥领先，从容拔得此次双11开局头筹。
+
+                            截止到昨日（11月1日）上午京东热销手机Top10来看，小米4款，分别为红米3S、红米Note4、小米5和小米4c。华为0款，子品牌荣耀3款，分别为荣耀7、荣耀8和荣耀畅玩5C。剩下三款机型分别为iPhone7、OPPO R9s以及努比亚Z11mini。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 info-right">
+                <blockquote>
+                    <h2>资讯列表</h2>
+                </blockquote>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b047e152ad666.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>高通宣布470亿美元收购NXP 将帮其拓展汽车芯片市场</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b049cad458310.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>小米Note2全球首卖 小米双11促销全面开启</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b04ae8a2f0453.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>高告别单打独斗，美国网件Orbi多路由系统告诉你什么叫走到哪都有网</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b047e152ad666.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>高通宣布470亿美元收购NXP 将帮其拓展汽车芯片市场</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b049cad458310.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>小米Note2全球首卖 小米双11促销全面开启</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b047e152ad666.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>高告别单打独斗，美国网件Orbi多路由系统告诉你什么叫走到哪都有网</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <p>自学路线 | 合作相关 | 投诉建议</p>
+        <p> 2016 翻山倒海企业网站.powered by Bootstrap.</p>
+    </div>
+</footer>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript"></script>
+
+</body>
+</html>

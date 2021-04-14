@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>演示站</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+        }
+        #myCarousel{
+            margin: 50px 0 0 0;
+        }
+        .logo{
+            padding: 0;
+        }
+        .daohang{
+            margin-top: 0;
+        }
+        .carousel-inner img{
+
+            margin: 0 auto;
+        }
+        .jumbotron{
+            background-image: url(http://img.php.cn/upload/course/000/000/004/581af31542837558.jpg);
+            margin: 50px 0 0;
+            color: #ccc;
+        }
+        .jumbotron h1{
+            font-size: 26px;
+            padding: 0 0 0 20px;
+        }
+        .jumbotron h4{
+            font-size: 15px;
+            padding: 0 0 0 20px;
+        }
+        #information{
+            background-color: #EEEEEE;
+            padding: 40px 0;
+        }
+        .info-cont{
+            background-color: #FFF;
+            margin: 0 0 20px 0 ;
+            box-shadow: 2px 2px 3px #ccc;
+        }
+        .info-cont img{
+            margin: 10px 0 10px 0;
+        }
+        .info-cont h4{
+            color: #000000;
+            padding: 4px 0 ;
+            font-size: 14px;
+        }
+        .info-cont p{
+            line-height: 1;
+            color: #888888;
+        }
+
+        /*小屏幕 大于等于768px*/
+        @media (min-width: 768px) {
+            .tab-h2{
+                font-size: 26px;
+            }
+            .tab-p{
+                font-size: 16px;
+            }
+            .text h3{
+                font-size: 22px;
+            }
+            .text p{
+                font-size: 16px;
+            }
+            .jumbotron h1{
+                font-size: 30px;
+            }
+            .jumbotron h4{
+                font-size: 16px;
+            }
+            .info-cont h4{
+
+                font-size: 16px;
+            }
+        }
+
+        /*中等屏幕 大于等于992px*/
+        @media (min-width: 992px) {
+            .tab-h2{
+                font-size: 28px;
+            }
+            .tab-p{
+                font-size: 17px;
+            }
+            .text h3{
+                font-size: 24px;
+            }
+            .text p{
+                font-size: 18px;
+            }
+            .jumbotron h1{
+                font-size: 32px;
+                padding: 0 0 0 20px;
+            }
+            .jumbotron h4{
+                font-size: 17px;
+                padding: 0 0 0 20px;
+            }
+            .info-cont h4{
+
+                font-size: 18px;
+            }
+            .info-cont p{
+                line-height: 1;
+                color: #888888;
+            }
+            .info-right{
+                background-color: #fff;
+                box-shadow: 2px 2px 3px #ccc;
+            }
+            .info-right blockquote{
+                margin: 0px;
+                padding: 0px;
+            }
+            .info-right h2{
+                font-size: 20px;
+                color: #333;
+                padding: 5px;
+            }
+            .info-right h4{
+                color: #333;
+                font-size: 16px;
+                padding: 2px 0 0 0;
+            }
+            .info-right p{
+                line-height: 1.6;
+            }
+            /*小屏幕 大于等于768px*/
+            @media (min-width: 768px) {
+                .tab-h2{
+                    font-size: 26px;
+                }
+                .tab-p{
+                    font-size: 16px;
+                }
+                .text h3{
+                    font-size: 22px;
+                }
+                .text p{
+                    font-size: 16px;
+                }
+                .jumbotron h1{
+                    font-size: 30px;
+                }
+                .jumbotron h4{
+                    font-size: 16px;
+                }
+                .info-cont h4{
+
+                    font-size: 16px;
+                }
+            }
+
+            /*中等屏幕 大于等于992px*/
+            @media (min-width: 992px) {
+                .tab-h2{
+                    font-size: 28px;
+                }
+                .tab-p{
+                    font-size: 17px;
+                }
+                .text h3{
+                    font-size: 24px;
+                }
+                .text p{
+                    font-size: 18px;
+                }
+                .jumbotron h1{
+                    font-size: 32px;
+                    padding: 0 0 0 20px;
+                }
+                .jumbotron h4{
+                    font-size: 17px;
+                    padding: 0 0 0 20px;
+                }
+                .info-cont h4{
+
+                    font-size: 18px;
+                }
+            }
+            /*大屏幕 大于等于1200px*/
+            @media (min-width: 1200px) {
+                .tab-h2{
+                    font-size: 30px;
+                }
+                .tab-p{
+                    font-size: 18px;
+                }
+                .text h3{
+                    font-size: 26px;
+                }
+                .text p{
+                    font-size: 19px;
+                }
+                .info-cont h4{
+
+                    font-size: 20px;
+                }
+            }
+
+            #footer{
+                color: white;
+                background-color: #000000;
+
+                padding: 20px;
+                text-align: center;
+            }
+
+        }
+        /*大屏幕 大于等于1200px*/
+        @media (min-width: 1200px) {
+            .tab-h2{
+                font-size: 30px;
+            }
+            .tab-p{
+                font-size: 18px;
+            }
+            .text h3{
+                font-size: 26px;
+            }
+            .text p{
+                font-size: 19px;
+            }
+            .info-cont h4{
+
+                font-size: 20px;
+            }
+        }
+
+        #footer{
+            color: white;
+            background-color: #000000;
+
+            padding: 20px;
+            text-align: center;
+        }
+        .page{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand logo" ><img src="https://www.baidu.com/img/flexible/logo/pc/result.png" height="50" alt=""></a>
+            <button type="button"class="navbar-toggle"data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse"id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right daohang " >
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+                <li class="active"><a href="information.html"><span class="glyphicon glyphicon-bookmark"></span> 资讯</a></li>
+                <li><a href="case.html"><span class="glyphicon glyphicon-fire"></span> 实例</a></li>
+                <li><a href="about.html"><span class="glyphicon glyphicon-envelope"></span> 关于我们</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class=" jumbotron">
+    <div class="container">
+        <hgroup>
+            <h1>资讯</h1>
+            <h4>二道沟的最新动态，资源.....</h4>
+        </hgroup>
+    </div>
+</div>
+<div id="information">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container-fluid" style="padding:0">
+                    <div class="row info-cont ">
+                        <div class="col-md-5 col-sm-5 col-xs-5">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581afc422dbc3400.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <a href="details.html"><h4>小米Note2全球首卖 小米双11促销全面开启</h4></a>
+                            <p class="hidden-xs">今日（11月1日）10点，小米Note2亮黑、冰川银两种颜色和三种配置，在小米商城、小米之家正式开售，不同配置及价格为4G+64G版本2799元、6G+128G版本3299元、6G+128G全球版3499元。</p>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row info-cont ">
+                        <div class="col-md-5 col-sm-5 col-xs-5">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581af948944fc836.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>告别单打独斗，美国网件Orbi多路由系统告诉你什么叫走到哪都有网</h4>
+                            <p class="hidden-xs">近日，美国网件公司发布了Orbi奥秘多路由系统，主要针对的就是网络信号难以完全覆盖的别墅家庭</p>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row info-cont ">
+                        <div class="col-md-5 col-sm-5 col-xs-5">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581af963316f0570.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>正式登陆中国的亚马逊Prime会员服务为“定制版”：海淘免运费</h4>
+                            <p class="hidden-xs">“亚马逊会员服务（Amazon Prime）正式登陆中国”，这是亚马逊全球高级副总裁罗素∙高（Russell Grandinetti）今天上午在北京宣布的“给中国消费者带来的惊喜”。</p>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <ul class="pagination">
+                            <li><a href="#">«</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 info-right">
+                <blockquote>
+                    <h2>资讯列表</h2>
+                </blockquote>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b047e152ad666.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>高通宣布470亿美元收购NXP 将帮其拓展汽车芯片市场</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b049cad458310.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>小米Note2全球首卖 小米双11促销全面开启</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0;padding: 0;">
+                            <img src="http://img.php.cn/upload/course/000/000/004/581b04ae8a2f0453.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <h4>高告别单打独斗，美国网件Orbi多路由系统告诉你什么叫走到哪都有网</h4>
+                            <p >用户 16/11/2 浏览数：</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p>自学路线 | 合作相关 | 投诉建议</p>
+        <p> 2016 格式企业网站.powered by Bootstrap.</p>
+    </div>
+</footer>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript"></script>
+
+</body>
+</html>
+
+
